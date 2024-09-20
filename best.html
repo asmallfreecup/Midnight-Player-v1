@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BB-UNBLOCKED GAMES</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #2E0854; /* Dark purple background */
+            color: white;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #3E0A63; /* Slightly lighter purple for the nav */
+            padding: 1rem;
+        }
+        nav a {
+            margin: 0 15px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #5A1D87; /* Even lighter purple for buttons */
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #7B36A4;
+        }
+        .container {
+            display: none;
+            padding: 20px;
+            text-align: center;
+        }
+        .container.active {
+            display: block;
+        }
+        .slider {
+            width: 100%;
+            height: 200px;
+            background: #4E0C6E; /* Darker purple slider */
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        .games-buttons {
+            position: absolute;
+            top: 300px; /* Below the slider */
+            left: 20px;
+        }
+        .games-button {
+            margin: 5px;
+            padding: 10px 20px;
+            background-color: #5A1D87;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .games-button:hover {
+            background-color: #7B36A4;
+        }
+        iframe {
+            width: 100%;
+            height: calc(100vh - 60px); /* Full height minus nav height */
+            border: none;
+        }
+        .fullscreen-button, .exit-fullscreen-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #5A1D87;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+        }
+        .fullscreen-button:hover, .exit-fullscreen-button:hover {
+            background-color: #7B36A4;
+        }
+        .exit-fullscreen-button {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" onclick="showPage('home')">Home</a>
+        <a href="#" onclick="showPage('games')">Games</a>
+    </nav>
+    <div id="slider" class="slider">
+        Thanks for checking out this new unblocked games
+    </div>
+    <div id="home" class="container active">
+        <h1>Welcome to Midnight Unblocked v1 Enjoy!</h1>
+    </div>
+    <div id="games" class="container">
+        <div class="games-buttons">
+            <button class="games-button" onclick="loadBitlife()">BITLIFE</button>
+            <button class="games-button" onclick="loadSubwaySurfers()">Subway Surfers</button>
+            <button class="games-button" onclick="loadHazard()">Hazard</button>
+            <button class="games-button" onclick="loadDogeMiner()">DogeMiner</button>
+            <button class="games-button" onclick="loadRedBall4()">RedBall4</button>
+            <button class="games-button" onclick="loadMurder()">Murder</button>
+            <button class="games-button" onclick="loadBasketBall()">BasketBall</button>
+        </div>
+    </div>
+    <div id="bitlife" class="container">
+        <iframe id="bitlifeFrame" data-src="https://worldcup169.github.io/g/bitlife"></iframe>
+        <div>
+            <button id="fullscreenButtonBitlife" class="fullscreen-button" onclick="enterFullscreen('bitlifeFrame')">Fullscreen</button>
+            <button id="exitFullscreenButtonBitlife" class="exit-fullscreen-button" onclick="exitFullscreen()">Exit Fullscreen</button>
+        </div>
+    </div>
+    <div id="subwaySurfers" class="container">
+        <iframe id="subwaySurfersFrame" data-src="https://worldcup169.github.io/g8/subway-surfers-san-francisco"></iframe>
+        <div>
+            <button id="fullscreenButtonSubway" class="fullscreen-button" onclick="enterFullscreen('subwaySurfersFrame')">Fullscreen</button>
+            <button id="exitFullscreenButtonSubway" class="exit-fullscreen-button" onclick="exitFullscreen()">Exit Fullscreen</button>
+        </div>
+    </div>
+    <div id="Hazard" class="container">
+        <iframe id="HazardFrame" data-src="https://asmallfreecup.github.io/House-of-Hazards/"></iframe>
+        <div>
+            <button id="fullscreenButtonHazard" class="fullscreen-button" onclick="enterFullscreen('HazardFrame')">Fullscreen</button>
+            <button id="exitFullscreenButtonHazard" class="exit-fullscreen-button" onclick="exitFullscreen()">Exit Fullscreen</button>
+        </div>
+    </div>
+    <div id="DogeMiner" class="container">
+        <iframe id="Doge-MinerFrame" data-src="https://asmallfreecup.github.io/Doge-Miner/"></iframe>
+        <div>
+            <button id="fullscreenButtonDogeMiner" class="fullscreen-button" onclick="enterFullscreen('DogeMinerFrame')">Fullscreen</button>
+            <button id="exitFullscreenButtonDogeMiner" class="exit-fullscreen-button" onclick="exitFullscreen()">Exit Fullscreen</button>
+        </div>
+    </div>
+    <div id="RedBall4" class="container">
+        <iframe id="RedBall4Frame" data-src="https://worldcup169.github.io/g177/red-ball-4/"></iframe>
+        <div>
+            <button id="fullscreenButtonRedBall4" class="fullscreen-button" onclick="enterFullscreen('RedBall4Frame')">Fullscreen</button>
+            <button id="exitFullscreenButtonRedBall4" class="exit-fullscreen-button" onclick="exitFullscreen()">Exit Fullscreen</button>
+        </div>
+    </div>
+    <div id="Murder" class="container">
+        <iframe id="MurderFrame" data-src="https://worldcup169.github.io/g5/murder"></iframe>
+        <div>
+            <button id="fullscreenButtonMurder" class="fullscreen-button" onclick="enterFullscreen('MurderFrame')">Fullscreen</button>
+            <button id="exitFullscreenButtonMurder" class="exit-fullscreen-button" onclick="exitFullscreen()">Exit Fullscreen</button>
+        </div>
+    </div>
+    <div id="BasketBall" class="container">
+        <iframe id="BasketBallFrame" data-src="https://worldcup169.github.io/g/basketball-stars/"></iframe>
+        <div>
+            <button id="fullscreenButtonBasketBall" class="fullscreen-button" onclick="enterFullscreen('BasketBallFrame')">Fullscreen</button>
+            <button id="exitFullscreenButtonBasketBall" class="exit-fullscreen-button" onclick="exitFullscreen()">Exit Fullscreen</button>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.container').forEach(container => {
+                container.classList.remove('active');
+                const iframe = container.querySelector('iframe');
+                if (iframe) {
+                    iframe.src = '';
+                }
+            });
+            document.getElementById(pageId).classList.add('active');
+            const activeIframe = document.querySelector(`#${pageId} iframe`);
+            if (activeIframe) {
+                activeIframe.src = activeIframe.getAttribute('data-src');
+            }
+        }
+
+        function loadBitlife() {
+            showPage('bitlife');
+        }
+
+        function loadSubwaySurfers() {
+            showPage('subwaySurfers');
+        }
+
+        function loadHazard() {
+            showPage('Hazard');
+        }
+
+        function loadDogeMiner() {
+            showPage('DogeMiner');
+        }
+        
+        function loadRedBall4() {
+            showPage('RedBall4');
+        }
+        
+        function loadMurder() {
+            showPage('Murder');
+        }
+        
+        function loadBasketBall() {
+            showPage('BasketBall');
+        }
+
+
+        function enterFullscreen(iframeId) {
+            const iframe = document.getElementById(iframeId);
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { /* Firefox */
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+                iframe.msRequestFullscreen();
+            }
+            document.querySelectorAll('.fullscreen-button').forEach(button => {
+                button.style.display = 'none';
+            });
+            document.querySelectorAll('.exit-fullscreen-button').forEach(button => {
+                button.style.display = 'inline-block';
+            });
+        }
+
+        function exitFullscreen() {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+            }
+            document.querySelectorAll('.fullscreen-button').forEach(button => {
+                button.style.display = 'inline-block';
+            });
+            document.querySelectorAll('.exit-fullscreen-button').forEach(button => {
+                button.style.display = 'none';
+            });
+        }
+
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement) {
+                document.querySelectorAll('.fullscreen-button').forEach(button => {
+                    button.style.display = 'inline-block';
+                });
+                document.querySelectorAll('.exit-fullscreen-button').forEach(button => {
+                    button.style.display = 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
